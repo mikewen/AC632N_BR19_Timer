@@ -21,7 +21,8 @@
 //*********************************************************************************//
 //                                 UART配置                                        //
 //*********************************************************************************//
-#define TCFG_UART0_ENABLE					ENABLE_THIS_MOUDLE                     //串口打印模块使能
+//#define TCFG_UART0_ENABLE					ENABLE_THIS_MOUDLE                     //串口打印模块使能
+#define TCFG_UART0_ENABLE					0
 #define TCFG_UART0_RX_PORT					NO_CONFIG_PORT                         //串口接收脚配置（用于打印可以选择NO_CONFIG_PORT）
 #define TCFG_UART0_TX_PORT  				IO_PORT_DP                            //串口发送脚配置
 #define TCFG_UART0_BAUDRATE  				1000000                                //串口波特率配置
@@ -57,7 +58,8 @@
 //*********************************************************************************//
 //                                 硬件SPI 配置                                        //
 //*********************************************************************************//
-#define	TCFG_HW_SPI1_ENABLE		ENABLE_THIS_MOUDLE
+//#define	TCFG_HW_SPI1_ENABLE		ENABLE_THIS_MOUDLE
+#define	TCFG_HW_SPI1_ENABLE		0
 //A组IO:    DI: PB2     DO: PB1     CLK: PB0
 //B组IO:    DI: PC3     DO: PC5     CLK: PC4
 #define TCFG_HW_SPI1_PORT		'A'
@@ -65,7 +67,8 @@
 #define TCFG_HW_SPI1_MODE		SPI_MODE_BIDIR_1BIT
 #define TCFG_HW_SPI1_ROLE		SPI_ROLE_MASTER
 
-#define	TCFG_HW_SPI2_ENABLE		ENABLE_THIS_MOUDLE
+//#define	TCFG_HW_SPI2_ENABLE		ENABLE_THIS_MOUDLE
+#define	TCFG_HW_SPI2_ENABLE		0
 //A组IO:    DI: PB8     DO: PB10    CLK: PB9
 //B组IO:    DI: PA13    DO: DM      CLK: DP
 #define TCFG_HW_SPI2_PORT		'A'
@@ -294,7 +297,8 @@
 //*********************************************************************************//
 #define TCFG_USER_TWS_ENABLE                      0   //tws功能使能
 #define TCFG_USER_BLE_ENABLE                      1   //BLE功能使能,---使能后,请配置TCFG_BLE_DEMO_SELECT选择DEMO例子
-#define TCFG_USER_EDR_ENABLE                      1   //EDR功能使能
+//#define TCFG_USER_EDR_ENABLE                      1   //EDR功能使能
+#define TCFG_USER_EDR_ENABLE                      0
 
 #define USER_SUPPORT_PROFILE_SPP    0
 #define USER_SUPPORT_PROFILE_HFP    0

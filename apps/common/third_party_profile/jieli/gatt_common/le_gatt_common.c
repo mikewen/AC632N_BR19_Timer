@@ -957,6 +957,7 @@ void ble_comm_set_config_name(const char *name_p, u8 add_ext_name)
 {
     log_info("%s\n", __FUNCTION__);
 
+    /*
     if (!name_p) {
         log_info("ble default name(%d): %s\n", ble_device_name_len, ble_device_name);
         return;
@@ -979,6 +980,15 @@ void ble_comm_set_config_name(const char *name_p, u8 add_ext_name)
         }
 
     }
+    */
+    char name_b[10]="WiRT_AC_TM";
+    ble_device_name_len = strlen(name_b);
+    if (ble_device_name_len > BT_NAME_LEN_MAX) {
+        log_error("cfg_name overflow!!!\n");
+        ble_device_name_len = BT_NAME_LEN_MAX;
+    }
+    memcpy(ble_device_name, name_b, ble_device_name_len);
+
     ble_device_name[ble_device_name_len] = 0;//结束符
     log_info("ble name(%d): %s \n", ble_device_name_len, ble_device_name);
 }

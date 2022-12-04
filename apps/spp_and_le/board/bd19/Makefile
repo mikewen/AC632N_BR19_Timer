@@ -457,9 +457,6 @@ LFLAGS := \
 	../../../../cpu/bd19/liba/btctrler.a \
 	../../../../cpu/bd19/liba/agreement.a \
 	../../../../cpu/bd19/liba/rcsp_stack.a \
-	../../../../apps/common/third_party_profile/tuya_protocol/sdk/lib/lib_tuya_v200_Q32S.a \
-	../../../../cpu/bd19/liba/media.a \
-	../../../../cpu/bd19/liba/media_app.a \
 	../../../../cpu/bd19/liba/lc3_codec_lib.a \
 	../../../../cpu/bd19/liba/usbc_codec_lib.a \
 	../../../../cpu/bd19/liba/lib_adpcm_ima_code.a \

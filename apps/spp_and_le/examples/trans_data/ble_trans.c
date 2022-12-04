@@ -486,18 +486,6 @@ static uint16_t trans_att_read_callback(hci_con_handle_t connection_handle, uint
         att_value_len = 2;
         break;
 
-    case ATT_CHARACTERISTIC_2a50_01_VALUE_HANDLE:
-        log_info("read PnP_ID\n");
-        att_value_len = sizeof(trans_PNP_ID);
-        if ((offset >= att_value_len) || (offset + buffer_size) > att_value_len) {
-            break;
-        }
-        if (buffer) {
-            memcpy(buffer, &trans_PNP_ID[offset], buffer_size);
-            att_value_len = buffer_size;
-        }
-        break;
-
     default:
         break;
     }
